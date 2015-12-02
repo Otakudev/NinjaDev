@@ -23,7 +23,7 @@
             this.current = newGallery || 0;
         };
     });
-
+/*Something New*/
     var gems = [
         {
             name: 'Azurite',
