@@ -16,7 +16,7 @@
             return this.tab === tabName;
         };
     });
-
+/* comment branch 1*/
     app.controller('GalleryController', function(){
         this.current = 0;
         this.setCurrent = function(newGallery){
