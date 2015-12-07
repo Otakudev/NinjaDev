@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>  // build a simple calculation
+<head>
     <title>Calculation Values</title>
     <link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
@@ -11,7 +11,7 @@
         var y = parseInt(document.getElementById("value2").value);
         var op = document.getElementById("operator").value;
         var calc;
-
+        //build a simple calculation
         if (op == "addition") {
             calc = x + y;               //Addition
 
@@ -35,16 +35,17 @@
     }
 </script>
 <body>
-<input type="text" id="value1">
+<input type="text" id="value1" size="4">
 <select id="operator">
     <option value="addition">+</option>
     <option value="subtraction">-</option>
     <option value="multiplication">*</option>
     <option value="division">/</option>
 </select>
-<input type="text" id="value2">
-<button type="button" onclick="calculator()">=</button>
-<p>= <span id="return"></span></p>
-
+<form>
+<input type="text" id="value2" size="4">
+<button type="button"  onclick="calculator()">=</button>
+<p >Result : <span id="return"></span></p>
+</form>
 </body>
 </html>
