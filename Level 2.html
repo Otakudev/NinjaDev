@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html ng-app="gemStore">
-<head>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-    <script type="text/javascript" src="angular.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+<html>
+<head>  // build a simple calculation
+    <title>Calculation Values</title>
+    <link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
 </head>
-<body >
+<script type="text/javascript">
+    function  calculator() {
+        var x = parseInt(document.getElementById("value1").value);
+        var y = parseInt(document.getElementById("value2").value);
+        var op = document.getElementById("operator").value;
+        var calc;
+
+        if (op == "addition") {
+            calc = x + y;
+
+        }
+        else
+
+        if (op == "subtraction") {
+            calc = x - y;
+        }
+        else
+
+        if (op == "multiplication") {
+            calc = x * y;
+        }
+        else
+        if (op== "division" &&y !=0) {
+            calc = x/y;
+        }
+        document.getElementById("return").innerHTML=calc;
+
+    }
+</script>
+<body>
+<input type="text" id="value1">
+<select id="operator">
+    <option value="addition">+</option>
+    <option value="subtraction">-</option>
+    <option value="multiplication">*</option>
+    <option value="division">/</option>
+</select>
+<input type="text" id="value2">
+<button type="button" onclick="calculator()">=</button>
+<p>= <span id="return"></span></p>
 
 </body>
 </html>
